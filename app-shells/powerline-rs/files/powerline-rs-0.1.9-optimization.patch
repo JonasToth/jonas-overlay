@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 12d2da0..3fe2ffd 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -31,3 +31,8 @@ version = "0.8.0"
+ 
+ [features]
+ default = ["chrono", "git2", "users"]
++
++[profile.release]
++opt-level = 3
++debug = false
++lto = true

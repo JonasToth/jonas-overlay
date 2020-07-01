@@ -1,0 +1,8 @@
+--- a/Makefile	2019-05-30 01:44:34.000000000 +0200
++++ b/Makefile	2019-08-04 16:10:23.136257623 +0200
+@@ -1,4 +1,4 @@
+-prefix ?= usr/local
++prefix ?= usr/
+ BINARY = $(prefix)/bin/ion
+ RELEASE = debug
+ TOOLCHAIN ?= 1.31.0

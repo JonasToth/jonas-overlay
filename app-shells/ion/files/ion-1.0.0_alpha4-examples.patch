@@ -1,0 +1,15 @@
+--- a/examples/run_examples.sh	2019-05-30 01:44:34.000000000 +0200
++++ b/examples/run_examples.sh	2019-08-04 16:21:26.499293960 +0200
+@@ -77,7 +77,11 @@
+ }
+ 
+ # Build debug binary
+-cargo +$TOOLCHAIN build
++if [ -v RUSTUP ] && [ "${RUSTUP}" -eq 1 ]; then
++    cargo +$TOOLCHAIN build
++else
++    cargo build
++fi
+ 
+ set +e
+ # Iterate over every Ion script in examples directory
