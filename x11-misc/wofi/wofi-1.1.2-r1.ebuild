@@ -15,8 +15,7 @@ KEYWORDS="~amd64 ~x86"
 BDEPEND="virtual/pkgconfig"
 DEPEND="dev-libs/wayland
 	x11-libs/gtk+"
-RDEPEND="dev-libs/wayland
-	x11-libs/gtk+"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	meson_src_configure
