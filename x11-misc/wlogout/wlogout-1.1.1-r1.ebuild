@@ -18,11 +18,10 @@ DEPEND="dev-libs/wayland
 	x11-libs/gtk+
 	dev-libs/gobject-introspection
 	transparency? ( gui-libs/gtk-layer-shell )
-	default_buttons? ( || (
+	default_buttons? (
 		systemd? ( sys-apps/systemd )
 		swaylock? ( gui-apps/swaylock )
 	)
-)
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-util/meson
