@@ -12,9 +12,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+BDEPEND="virtual/pkgconfig"
 DEPEND="dev-libs/wayland
-		>=x11-libs/gtk+-3.24.16
-		virtual/pkgconfig"
+		x11-libs/gtk+"
 
 src_configure() {
 	meson_src_configure
