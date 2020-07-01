@@ -28,11 +28,14 @@ dirs-2.0.2
 dirs-sys-0.3.4
 failure-0.1.6
 failure_derive-0.1.6
+flame-0.2.2
 fuchsia-cprng-0.1.1
 getrandom-0.1.12
 git2-0.10.1
 idna-0.2.0
+itoa-0.4.4
 jobserver-0.1.17
+lazy_static-0.2.11
 lazy_static-1.4.0
 libc-0.2.65
 libgit2-sys-0.9.1
@@ -55,11 +58,16 @@ redox_syscall-0.1.56
 redox_users-0.3.1
 rust-argon2-0.5.1
 rustc-demangle-0.1.16
+ryu-1.0.2
+serde-1.0.101
+serde_derive-1.0.101
+serde_json-1.0.41
 smallvec-0.6.10
 strsim-0.8.0
 syn-1.0.5
 synstructure-0.12.1
 textwrap-0.11.0
+thread-id-3.3.0
 time-0.1.42
 unicode-bidi-0.3.4
 unicode-normalization-0.1.8
@@ -80,12 +88,13 @@ inherit cargo
 DESCRIPTION="powerline-shell rewritten in Rust. Inspired by powerline-go."
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
-HOMEPAGE="https://github.com/jD91mZM2/powerline-rs"
-SRC_URI="$(cargo_crate_uris ${CRATES})"
+HOMEPAGE="https://gitlab.com/jD91mZM2/powerline-rs"
+SRC_URI="https://crates.io/api/v1/crates/${PN}/${PV}/download -> ${P}.crate
+		$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
-LICENSE="Apache-2.0 Apache-2.0 WITH LLVM-exception BSD-2-Clause CC0-1.0 ISC MIT Unlicense"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -93,7 +102,11 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-# src_prepare() {
-	# eapply -p0 "${FILESDIR}/${P}-optimization.patch"
-	# eapply_user
-# }
+src_prepare() {
+	eapply "${FILESDIR}/${P}-optimization.patch"
+	eapply_user
+}
+
+src_compile() {
+	cargo_src_compile "--no-default-features"
+}

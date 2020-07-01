@@ -1,11 +1,13 @@
 diff --git a/Cargo.toml b/Cargo.toml
-index 76f84f1..6686010 100644
+index 76f84f1..d64f72b 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -34,3 +34,8 @@ version = "0.9.1"
+@@ -33,4 +33,9 @@ optional = true
+ version = "0.9.1"
  
  [features]
- default = ["chrono", "git2", "users"]
+-default = ["chrono", "git2", "users"]
++default = ["chrono", "git2", "users", "flame"]
 +
 +[profile.release]
 +opt-level = 3
