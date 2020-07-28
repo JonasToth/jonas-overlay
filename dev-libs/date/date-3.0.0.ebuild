@@ -26,7 +26,8 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	eapply "${FILESDIR}"/${P}-c-locale-export.patch
+	eapply "${FILESDIR}"/${P}-c-locale-export.patch \
+           "${FILESDIR}"/${P}-version.patch
 	eapply_user
 	cmake_src_prepare
 }
