@@ -18,9 +18,16 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="test"
+IUSE="test tz"
 RESTRICT="!test? ( test )"
 
 BDEPEND=""
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_configure() {
+	local mycmakeargs=(
+		-DBUILD_TZ_LIB=$(usex tz)
+	)
+	cmake_src_configure
+}
