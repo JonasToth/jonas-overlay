@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="test tz"
+IUSE="test tz system_tz only_c_locale"
 RESTRICT="!test? ( test )"
 
 BDEPEND=""
@@ -28,6 +28,9 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_TZ_LIB=$(usex tz)
+		-DUSE_SYSTEM_TZ_DB=$(usex system_tz)
+		-DENABLE_DATE_TESTING=$(usex test)
+		-DCOMPILE_WITH_C_LOCALE=$(usex only_c_locale)
 	)
 	cmake_src_configure
 }
