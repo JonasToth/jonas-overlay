@@ -38,12 +38,9 @@ BDEPEND="
 	pulseaudio? ( media-sound/pulseaudio )
 	tray? ( dev-libs/libdbusmenu[gtk3] )
 	udev? ( virtual/libudev:= )
-"
+	"
 
-DEPEND="
-	${BDEPEND}
-"
-
+DEPEND="${BDEPEND}"
 RDEPEND="${DEPEND}"
 
 if [[ ${PV} != 9999 ]]; then
