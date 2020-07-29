@@ -106,7 +106,7 @@ src_install() {
 	if use systemd; then
 		systemd_dounit greetd.service
 	else
-		newinitd "${FILESDIR}"/${PN}.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}.init ${PN}
 	fi
 
 	if use man; then
