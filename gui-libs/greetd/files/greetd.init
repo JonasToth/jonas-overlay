@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+command=/usr/bin/greetd
+pidfile=/var/run/greetd.pid
+name="Greetd Server"
+
+description="Login Daemon for Wayland"
+
+start() {
+	ebegin "Starting greetd"
+	start-stop-daemon --start --exec ${command} --pidfile ${pidfile} --background --make-pidfile
+	eend $?
+}
