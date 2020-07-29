@@ -36,7 +36,10 @@ BDEPEND="
 	mpd? ( media-libs/libmpdclient )
 	network? ( dev-libs/libnl:3 )
 	pulseaudio? ( media-sound/pulseaudio )
-	tray? ( dev-libs/libdbusmenu[gtk3] )
+	tray? (
+			dev-libs/libdbusmenu[gtk3]
+			dev-libs/libappindicator
+		  )
 	udev? ( virtual/libudev:= )
 	"
 
