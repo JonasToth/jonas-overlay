@@ -18,7 +18,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="mpd network pulseaudio tray +udev"
+IUSE="gtk-layer-shell mpd network pulseaudio tray +udev"
 
 BDEPEND="
 	>=app-text/scdoc-1.9.2
@@ -33,6 +33,7 @@ BDEPEND="
 	dev-libs/wayland
 	dev-libs/wayland-protocols
 	gui-libs/wlroots
+	gtk-layer-shell? ( gui-libs/gtk-layer-shell )
 	mpd? ( media-libs/libmpdclient )
 	network? ( dev-libs/libnl:3 )
 	pulseaudio? ( media-sound/pulseaudio )
