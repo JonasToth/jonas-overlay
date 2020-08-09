@@ -51,13 +51,6 @@ if [[ ${PV} != 9999 ]]; then
 	S="${WORKDIR}/${PN^}-${PV}"
 fi
 
-src_prepare() {
-	eapply "${FILESDIR}"/${P}-date-dep.patch
-	eapply_user
-
-	meson_src_prepare
-}
-
 src_configure() {
 	local emesonargs=(
 		$(meson_feature mpd)
