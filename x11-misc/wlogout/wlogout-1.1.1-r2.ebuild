@@ -12,7 +12,7 @@ SRC_URI="https://github.com/ArtsyMacaw/wlogout/archive/${PV}.tar.gz -> ${P}.tar.
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="default_buttons fish-completion layershell man systemd zsh-completion"
+IUSE="fish-completion layershell man zsh-completion"
 
 BDEPEND="
 	dev-util/meson
