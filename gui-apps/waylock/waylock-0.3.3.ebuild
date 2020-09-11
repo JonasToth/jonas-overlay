@@ -87,6 +87,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Copy the file '/etc/waylock/waylock.tml' into '${HOME}/.config/waylock/waylock.toml'"
-	elog "and adjust the settings to your own preferences."
+	elog "Copy the file '/etc/waylock/waylock.tml' into "
+	elog "'${HOME}/.config/waylock/waylock.toml' and adjust the settings to your"
+	elog " own preferences."
 }
