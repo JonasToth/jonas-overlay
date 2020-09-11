@@ -18,6 +18,7 @@ IUSE="+man gdk-pixbuf"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
+	!gui-apps/swaylock
 	dev-libs/wayland
 	dev-libs/wayland-protocols
 	sys-libs/pam
