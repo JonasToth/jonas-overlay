@@ -295,3 +295,23 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-libs/capnproto"
+
+src_prepare() {
+	sed -i '/share\/fish\/completions\//d' sqv/Makefile tool/Makefile
+	sed -i '/\/sqv\?.fish/d' sqv/Makefile tool/Makefile
+	sed -i '/share\/bash-completion\/completions\//d' sqv/Makefile tool/Makefile
+	sed -i '/share\/zsh\/site-functions\//d' sqv/Makefile tool/Makefile
+	sed -i '/\/_sq/d' sqv/Makefile tool/Makefile
+	default
+}
+
+src_compile() {
+	cargo_src_compile --package sequoia-tool --package sequoia-store --package sequoia-sqv
+}
+
+src_install() {
+	dobin target/release/sq
+	dobin target/release/sqv
+	into /usr/lib/sequoia
+	dobin target/release/sequoia-public-key-store
+}
