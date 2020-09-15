@@ -22,22 +22,23 @@ backtrace-sys-0.1.37
 base64-0.11.0
 base64-0.12.3
 bindgen-0.51.1
+bitflags-1.2.1
 bit-set-0.5.2
 bit-vec-0.6.2
-bitflags-1.2.1
 blake2b_simd-0.5.10
 block-buffer-0.7.3
+block-buffer-0.9.0
 block-padding-0.1.5
 bstr-0.2.13
-byte-tools-0.3.1
 byteorder-1.3.4
 bytes-0.4.12
+byte-tools-0.3.1
 bzip2-0.3.3
 bzip2-sys-0.1.9+1.0.8
 capnp-0.10.3
+capnpc-0.10.2
 capnp-futures-0.10.1
 capnp-rpc-0.10.0
-capnpc-0.10.2
 cc-1.0.59
 cexpr-0.3.6
 cfg-if-0.1.10
@@ -49,6 +50,7 @@ colored-1.9.1
 constant_time_eq-0.1.5
 core-foundation-0.7.0
 core-foundation-sys-0.7.0
+cpuid-bool-0.1.2
 crc32fast-1.2.0
 crossbeam-deque-0.7.3
 crossbeam-epoch-0.8.2
@@ -59,15 +61,19 @@ crossterm_winapi-0.4.0
 csv-1.1.3
 csv-core-0.1.10
 ctor-0.1.15
-ed25519-dalek-1.0.0
+curve25519-dalek-3.0.0
 diff-0.1.12
 difference-2.0.0
 digest-0.8.1
+digest-0.9.0
 dirs-1.0.5
 dirs-2.0.2
 dirs-sys-0.3.5
+doc-comment-0.3.3
 docopt-1.1.0
 dyn-clone-1.0.1
+ed25519-1.0.1
+ed25519-dalek-1.0.0
 either-1.6.0
 ena-0.13.1
 encode_unicode-0.3.6
@@ -90,6 +96,7 @@ fuchsia-zircon-sys-0.3.3
 futures-0.1.29
 futures-cpupool-0.1.8
 generic-array-0.12.3
+generic-array-0.14.4
 getrandom-0.1.14
 glob-0.3.0
 h2-0.1.26
@@ -97,8 +104,8 @@ hashbrown-0.8.2
 heck-0.3.1
 hermit-abi-0.1.15
 http-0.1.21
-http-body-0.1.0
 httparse-1.3.4
+http-body-0.1.0
 hyper-0.12.35
 hyper-tls-0.3.2
 idna-0.2.0
@@ -112,6 +119,7 @@ lalrpop-util-0.17.2
 lazy_static-1.4.0
 libc-0.2.76
 libloading-0.5.2
+libm-0.2.1
 libsqlite3-sys-0.15.0
 linked-hash-map-0.5.3
 lock_api-0.3.4
@@ -132,13 +140,17 @@ miow-0.3.5
 native-tls-0.2.4
 net2-0.2.34
 nettle-7.0.0
+nettle-src-3.5.1-2
 nettle-sys-2.0.4
 new_debug_unreachable-1.0.4
 nom-4.2.3
-num-integer-0.1.43
-num-traits-0.2.12
+num-bigint-dig-0.6.0
 num_cpus-1.13.0
+num-integer-0.1.43
+num-iter-0.1.41
+num-traits-0.2.12
 opaque-debug-0.2.3
+opaque-debug-0.3.0
 openssl-0.10.30
 openssl-probe-0.1.2
 openssl-sys-0.9.58
@@ -155,9 +167,9 @@ pkg-config-0.3.18
 ppv-lite86-0.2.9
 precomputed-hash-0.1.1
 prettytable-rs-0.8.0
+proc-macro2-1.0.19
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.19
 quickcheck-0.9.2
 quote-1.0.7
 rand-0.6.5
@@ -199,11 +211,15 @@ serde-1.0.115
 serde_derive-1.0.115
 serde_json-1.0.57
 sha2-0.8.2
+sha2-0.9.1
 shlex-0.1.1
+signature-1.2.2
 siphasher-0.2.3
 slab-0.4.2
 smallvec-0.6.13
+smallvec-1.4.2
 socket2-0.3.11
+spin-0.5.2
 string-0.2.1
 string_cache-0.7.5
 string_cache_codegen-0.4.4
@@ -212,6 +228,7 @@ strsim-0.8.0
 strsim-0.9.3
 structopt-0.3.16
 structopt-derive-0.4.9
+subtle-2.2.3
 syn-1.0.38
 synstructure-0.12.4
 tempfile-3.1.0
@@ -257,8 +274,11 @@ winapi-0.3.9
 winapi-build-0.1.1
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-x86_64-pc-windows-gnu-0.4.0
+win-crypto-ng-0.2.0
 ws2_32-sys-0.2.1
 zbase32-0.1.2
+zeroize-1.1.0
+zeroize_derive-1.0.0
 "
 
 inherit cargo
@@ -275,4 +295,3 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-libs/capnproto"
-RDEPEND=""
