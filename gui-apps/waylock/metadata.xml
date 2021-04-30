@@ -12,6 +12,6 @@
 	<upstream>
 		<remote-id type="github">ifreund/waylock</remote-id>
 		<bugs-to>https://github.com/ifreund/waylock/issues</bugs-to>
-        <changelog>https://github.com/ifreund/waylock/releases</changelog>
+		<changelog>https://github.com/ifreund/waylock/releases</changelog>
 	</upstream>
 </pkgmetadata>
