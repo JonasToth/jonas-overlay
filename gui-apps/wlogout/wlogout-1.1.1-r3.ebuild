@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -20,7 +20,7 @@ BDEPEND="
 	"
 DEPEND="
 	dev-libs/wayland
-	x11-libs/gtk+
+	x11-libs/gtk+:3[wayland]
 	dev-libs/gobject-introspection
 	layershell? ( gui-libs/gtk-layer-shell )
 	"
