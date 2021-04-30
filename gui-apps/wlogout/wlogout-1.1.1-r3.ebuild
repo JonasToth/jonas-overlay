@@ -11,7 +11,7 @@ SRC_URI="https://github.com/ArtsyMacaw/wlogout/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="fish-completion layershell man zsh-completion"
 
 BDEPEND="
@@ -32,16 +32,17 @@ RDEPEND="
 
 src_configure() {
 	local emesonargs=(
-		-Dbash-completion=false
-		-Dfish-completion=false
-		-Dzsh-completion=false
+		-Dbash-completions=false
+		-Dfish-completions=false
+		-Dzsh-completions=false
 		$(meson_feature man man-pages)
 	)
 	meson_src_configure
 }
 
 src_install() {
-	default
+	meson_src_install
+
 	newbashcomp completions/wlogout.bash ${PN}
 
 	if use zsh-completion ; then
