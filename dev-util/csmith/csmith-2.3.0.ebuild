@@ -9,7 +9,7 @@ S="${WORKDIR}/csmith-${P}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 BDEPEND="dev-libs/libbsd"
 DEPEND=""

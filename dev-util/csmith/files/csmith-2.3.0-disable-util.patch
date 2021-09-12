@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index e27ef47..e583119 100644
+index 7ef9fd1..7ba3ae5 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -141,9 +141,9 @@ message(STATUS "Check for M4 macro processor: found ${M4}")
@@ -7,11 +7,23 @@ index e27ef47..e583119 100644
  ###############################################################################
  
 -add_subdirectory(doc)
--add_subdirectory(runtime)
--add_subdirectory(scripts)
 +# add_subdirectory(doc)
-+# add_subdirectory(runtime)
+ add_subdirectory(runtime)
+-add_subdirectory(scripts)
 +# add_subdirectory(scripts)
  add_subdirectory(src)
  
  ###############################################################################
+diff --git a/runtime/CMakeLists.txt b/runtime/CMakeLists.txt
+index da24909..ec5f070 100644
+--- a/runtime/CMakeLists.txt
++++ b/runtime/CMakeLists.txt
+@@ -35,7 +35,7 @@ project(csmith_runtime)
+ cmake_policy(SET CMP0042 NEW) # Quiet warning about shared libs on OS X.
+ 
+ set(INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/include/csmith-${csmith_VERSION}")
+-set(LIB_DIR     "${CMAKE_INSTALL_PREFIX}/lib")
++set(LIB_DIR     "${CMAKE_INSTALL_PREFIX}/lib64")
+ 
+ ###############################################################################
+ 
