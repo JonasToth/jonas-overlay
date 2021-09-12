@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e27ef47..e583119 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -141,9 +141,9 @@ message(STATUS "Check for M4 macro processor: found ${M4}")
+ 
+ ###############################################################################
+ 
+-add_subdirectory(doc)
+-add_subdirectory(runtime)
+-add_subdirectory(scripts)
++# add_subdirectory(doc)
++# add_subdirectory(runtime)
++# add_subdirectory(scripts)
+ add_subdirectory(src)
+ 
+ ###############################################################################
