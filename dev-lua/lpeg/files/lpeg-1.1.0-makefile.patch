@@ -1,7 +1,7 @@
 Respect user CFLAGS and LDFLAGS.
 
---- lpeg-1.0.2/makefile
-+++ lpeg-1.0.2/makefile
+--- lpeg-1.1.0/makefile
++++ lpeg-1.1.0/makefile
 @@ -1,7 +1,7 @@
  LIBNAME = lpeg
  LUADIR = ../lua/

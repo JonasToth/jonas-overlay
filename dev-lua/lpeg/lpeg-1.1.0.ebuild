@@ -31,8 +31,8 @@ HTML_DOCS=( lpeg.html re.html )
 PATCHES=( "${FILESDIR}"/${PN}-1.1.0-makefile.patch )
 
 src_unpack() {
-	unpack "${P}.zip"
-	unpack "${WORKDIR}/${P}.tar.gz"
+	unpack "${P}.zip" || die
+	unpack "${WORKDIR}/${P}.tar.gz" || die
 }
 
 lua_src_prepare() {
