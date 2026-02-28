@@ -11,7 +11,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND="dev-libs/libbsd"
+BDEPEND="
+	dev-libs/libbsd
+	sys-devel/m4"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
